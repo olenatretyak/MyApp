@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script type=text/ng-template id="1.html">
+      <div ng-controller="MainCtrl">
+        <a href="#/2">Second page</a>
+        {{ text }}
+      </div>
+    </script>
+    <script type=text/ng-template id="2.html">
+      <div ng-controller="MainSecondCtrl">
+        <a href="#/">First page</a>
+        {{ text }}
+      </div>
+    </script>
+
+  </head>
+  <body>
+    <div ng-view></div>
+  </body>
+</html>
